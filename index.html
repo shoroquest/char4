@@ -9,7 +9,7 @@
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
   </head>
   <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs="sourceType: webcam;">
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
       <a-assets>
         <a-asset-item
           id="mask"
@@ -18,9 +18,7 @@
       </a-assets>
 
       <a-marker
-        preset="custom"
-        type="pattern"
-        url="https://raw.githubusercontent.com/shoroquest/char4/master/assets/usy.patt"
+      type='barcode' value='25'
         ><a-entity
           gltf-model="#mask"
           animation-mixer
